@@ -6,11 +6,13 @@
  * Time: 15:05
  */
 
-function otomatik_url($veri) {
+	function hashtag($gelen) {
 
-	    $veri = ereg_replace("[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]", "<a href=\"\\0\" target=\"_blank\">\\0</a>", $veri);
-	    return $veri;
+		$desen = "@#+([a-zA-Z0-9-IıĞğÜüŞşİiÖöÇç]+)@si";
+		$gelen = preg_replace($desen, '<a href="hashtag?tag=$1">$0</a>', $gelen);
 
-}
+		return 	$gelen;
+
+	}
 
 ?>
