@@ -6,12 +6,12 @@
  * Time: 15:05
  */
 
-	function hashtag($gelen) {
+	function hashtag($param) {
 
-		$desen = "@#+([a-zA-Z0-9-IıĞğÜüŞşİiÖöÇç]+)@si";
-		$gelen = preg_replace($desen, '<a href="hashtag?tag=$1">$0</a>', $gelen);
+		$pattern = "@#+([a-zA-Z0-9-IıĞğÜüŞşİiÖöÇç]+)@si";
+		$param = preg_replace($pattern, '<a href="hashtag?tag=$1">$0</a>', $param);
 
-		return 	$gelen;
+		return 	$param;
 
 	}
 
